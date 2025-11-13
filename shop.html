@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zukula Life Organics Shop</title>
+  <!-- Load Poppins from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Consistent accent color with the homepage
+            'primary-green': '#00cc66', 
+            'dark-bg': '#0a0a0a',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-950 text-white min-h-screen">
+
+  <!-- Header: Sticky, Blurred Background, Shadowed -->
+  <header class="bg-gray-900/95 shadow-2xl backdrop-blur-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center">
+      <h1 class="text-3xl font-extrabold tracking-tight text-primary-green">
+        Zukula Life Organics
+      </h1>
+      <nav class="flex items-center space-x-6 mt-4 md:mt-0">
+        <a href="index.html" class="text-gray-300 hover:text-primary-green font-medium transition duration-300 text-lg">Home</a>
+        <a href="#contact" class="text-gray-300 hover:text-primary-green font-medium transition duration-300 text-lg">Contact</a>
+        <button onclick="toggleCart()" class="cart-btn bg-primary-green text-gray-900 font-bold py-2 px-4 rounded-xl shadow-lg flex items-center transition duration-300 hover:bg-emerald-400 focus:outline-none">
+            Cart 🛒 <span id="cartCount" class="ml-2 bg-red-600 text-white font-bold text-xs w-6 h-6 flex items-center justify-center rounded-full">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+    
+    <!-- Search Bar -->
+    <div class="text-center py-10">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search for organic products..." 
+        onkeyup="searchProducts()" 
+        class="w-full max-w-xl p-3 md:p-4 rounded-full border-none bg-gray-800 text-white placeholder-gray-400 focus:ring-4 focus:ring-primary-green focus:outline-none transition duration-300"
+      >
+    </div>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+      <h2 class="text-4xl font-extrabold text-center text-primary-green mb-12">Shop Our Full Range</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="productGrid">
+
+        <!-- Product Card 1: Organic Honey -->
+        <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40 relative" data-name="Organic Honey" data-price="150">
+          <!-- Floating Price Badge (FIXED: Added z-10) -->
+          <span class="absolute top-4 right-4 bg-primary-green text-gray-900 font-bold px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 -translate-y-2 transition duration-300 z-10">R150</span>
+          
+          <img 
+            src="item1.jpeg" 
+            alt="Organic Honey" 
+            class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
+            onerror="this.onerror=null;this.src='https://placehold.co/600x400/10b981/ffffff?text=Pure+Honey'"
+          >
+          <h3 class="text-xl font-bold text-white mb-1">Organic Honey</h3>
+          <p class="text-primary-green font-extrabold text-lg mb-2">R150</p>
+          <p class="text-gray-400 mb-4 text-sm">Pure, raw, and healthy honey straight from nature's untouched beehives.</p>
+          
+          <div class="flex justify-center items-center space-x-2 mb-4">
+            <button onclick="changeQty(this, -1)" class="bg-gray-700 text-white font-bold w-8 h-8 rounded-full hover:bg-gray-600 transition">-</button>
+            <input type="number" value="1" min="1" class="w-12 text-center bg-gray-800 text-white rounded-md border-primary-green focus:ring-primary-green">
+            <button onclick="changeQty(this, 1)" class="bg-primary-green text-gray-900 font-bold w-8 h-8 rounded-full hover:bg-emerald-400 transition">+</button>
+          </div>
+          
+          <button onclick="addToCart('Organic Honey', 150, this)" class="w-full bg-primary-green text-gray-900 font-semibold py-3 rounded-full hover:bg-emerald-400 transition duration-300 shadow-md">
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Product Card 2: Herbal Tea -->
+        <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40 relative" data-name="Herbal Tea" data-price="120">
+          <!-- Floating Price Badge (FIXED: Added z-10) -->
+          <span class="absolute top-4 right-4 bg-primary-green text-gray-900 font-bold px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 -translate-y-2 transition duration-300 z-10">R120</span>
+          <img 
+            src="item2.jpeg" 
+            alt="Herbal Tea" 
+            class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
+            onerror="this.onerror=null;this.src='https://placehold.co/600x400/065f46/ffffff?text=Herbal+Tea'"
+          >
+          <h3 class="text-xl font-bold text-white mb-1">Herbal Tea</h3>
+          <p class="text-primary-green font-extrabold text-lg mb-2">R120</p>
+          <p class="text-gray-400 mb-4 text-sm">Refreshing blends of organic herbs to rejuvenate your mind and body.</p>
+          <div class="flex justify-center items-center space-x-2 mb-4">
+            <button onclick="changeQty(this, -1)" class="bg-gray-700 text-white font-bold w-8 h-8 rounded-full hover:bg-gray-600 transition">-</button>
+            <input type="number" value="1" min="1" class="w-12 text-center bg-gray-800 text-white rounded-md border-primary-green focus:ring-primary-green">
+            <button onclick="changeQty(this, 1)" class="bg-primary-green text-gray-900 font-bold w-8 h-8 rounded-full hover:bg-emerald-400 transition">+</button>
+          </div>
+          <button onclick="addToCart('Herbal Tea', 120, this)" class="w-full bg-primary-green text-gray-900 font-semibold py-3 rounded-full hover:bg-emerald-400 transition duration-300 shadow-md">
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Product Card 3: Natural Oils -->
+        <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40 relative" data-name="Natural Oils" data-price="200">
+          <!-- Floating Price Badge (FIXED: Added z-10) -->
+          <span class="absolute top-4 right-4 bg-primary-green text-gray-900 font-bold px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 -translate-y-2 transition duration-300 z-10">R200</span>
+          <img 
+            src="item3.jpeg" 
+            alt="Natural Oils" 
+            class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
+            onerror="this.onerror=null;this.src='https://placehold.co/600x400/34d399/ffffff?text=Natural+Oils'"
+          >
+          <h3 class="text-xl font-bold text-white mb-1">Natural Oils</h3>
+          <p class="text-primary-green font-extrabold text-lg mb-2">R200</p>
+          <p class="text-gray-400 mb-4 text-sm">High-quality oils extracted naturally for skin, hair, and wellness.</p>
+          <div class="flex justify-center items-center space-x-2 mb-4">
+            <button onclick="changeQty(this, -1)" class="bg-gray-700 text-white font-bold w-8 h-8 rounded-full hover:bg-gray-600 transition">-</button>
+            <input type="number" value="1" min="1" class="w-12 text-center bg-gray-800 text-white rounded-md border-primary-green focus:ring-primary-green">
+            <button onclick="changeQty(this, 1)" class="bg-primary-green text-gray-900 font-bold w-8 h-8 rounded-full hover:bg-emerald-400 transition">+</button>
+          </div>
+          <button onclick="addToCart('Natural Oils', 200, this)" class="w-full bg-primary-green text-gray-900 font-semibold py-3 rounded-full hover:bg-emerald-400 transition duration-300 shadow-md">
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Product Card 4: Organic Spices -->
+        <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40 relative" data-name="Organic Spices" data-price="90">
+          <!-- Floating Price Badge (FIXED: Added z-10) -->
+          <span class="absolute top-4 right-4 bg-primary-green text-gray-900 font-bold px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 -translate-y-2 transition duration-300 z-10">R90</span>
+          <img 
+            src="item4.jpeg" 
+            alt="Organic Spices" 
+            class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
+            onerror="this.onerror=null;this.src='https://placehold.co/600x400/10b981/ffffff?text=Organic+Spices'"
+          >
+          <h3 class="text-xl font-bold text-white mb-1">Organic Spices</h3>
+          <p class="text-primary-green font-extrabold text-lg mb-2">R90</p>
+          <p class="text-gray-400 mb-4 text-sm">Add natural flavor and aroma to your meals with our organic spices.</p>
+          <div class="flex justify-center items-center space-x-2 mb-4">
+            <button onclick="changeQty(this, -1)" class="bg-gray-700 text-white font-bold w-8 h-8 rounded-full hover:bg-gray-600 transition">-</button>
+            <input type="number" value="1" min="1" class="w-12 text-center bg-gray-800 text-white rounded-md border-primary-green focus:ring-primary-green">
+            <button onclick="changeQty(this, 1)" class="bg-primary-green text-gray-900 font-bold w-8 h-8 rounded-full hover:bg-emerald-400 transition">+</button>
+          </div>
+          <button onclick="addToCart('Organic Spices', 90, this)" class="w-full bg-primary-green text-gray-900 font-semibold py-3 rounded-full hover:bg-emerald-400 transition duration-300 shadow-md">
+            Add to Cart
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Overlay: Click to close -->
+  <div id="cartOverlay" class="fixed inset-0 bg-black/50 z-[1000] hidden transition-opacity duration-300" onclick="toggleCart()"></div>
+
+  <!-- Cart Sidebar: Fixed position, sliding animation -->
+  <div class="fixed top-0 right-0 w-full max-w-sm h-full bg-gray-900 shadow-2xl z-[1001] transform translate-x-full transition-transform duration-400" id="cartSidebar">
+    <div class="p-6 h-full flex flex-col">
+      <div class="flex justify-between items-center pb-4 border-b border-gray-700">
+        <h3 class="text-2xl font-extrabold text-primary-green">Shopping Cart</h3>
+        <button onclick="toggleCart()" class="text-gray-400 hover:text-white transition duration-200 text-3xl p-1 leading-none focus:outline-none">
+          &times;
+        </button>
+      </div>
+
+      <div id="cartItems" class="flex-grow overflow-y-auto py-4 space-y-4">
+        <!-- Cart items dynamically inserted here -->
+      </div>
+      
+      <div class="mt-auto pt-4 border-t border-gray-700">
+        <div class="flex justify-between items-center text-xl font-bold mb-4">
+          <span>Total:</span>
+          <span id="cartTotal" class="text-primary-green">R0</span>
+        </div>
+        <a href="https://wa.me/27787375280?text=I%20would%20like%20to%20place%20an%20order%20for..." target="_blank" class="checkout-btn block w-full text-center bg-primary-green text-gray-900 font-bold py-3 rounded-full shadow-lg hover:bg-emerald-400 transition duration-300">
+          Proceed to Checkout (WhatsApp)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <h3 class="text-2xl font-bold text-primary-green mb-4">Get In Touch</h3>
+      <p class="text-gray-400 mb-2">Contact us directly:</p>
+      <a href="tel:+27787375280" class="text-xl text-white hover:text-primary-green transition duration-300 font-medium">+27 78 737 5280</a>
+      <p class="text-gray-500 mt-6 text-sm">&copy; 2025 Zukula Life Organics. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/27787375280" target="_blank" class="fixed bottom-6 right-6 z-[1002] bg-[#25D366] p-4 rounded-full shadow-2xl transition duration-300 transform hover:scale-110 hover:shadow-primary-green/50">
+    <!-- Existing WhatsApp SVG Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30" fill="white">
+      <path d="M16 3C9.372 3 4 8.372 4 15c0 2.648.89 5.094 2.373 7.05L4 29l6.163-2.322A11.932 11.932 0 0016 27c6.628 0 12-5.372 12-12S22.628 3 16 3zm5.17 18.39c-.29.82-1.07 1.36-1.92 1.36-.29 0-.57-.07-.84-.2-1.3-.5-3.06-1.63-4.42-3.02-1.36-1.37-2.52-3.13-3.03-4.42-.25-.63-.05-1.33.5-1.79l1.06-1.06c.56-.56 1.43-.72 2.15-.4l.29.13c.72.32 1.57.1 2.05-.54l.81-1.09c.46-.63 1.33-.78 1.97-.3l1.41 1.06c.64.48.78 1.37.3 2.01l-.51.68c-.29.38-.77.5-1.18.32l-.74-.27c-.31-.11-.66-.03-.9.21l-.7.7c-.24.24-.32.59-.21.9l.27.74c.18.41.06.89-.32 1.18l-.68.51c-.64.48-1.52.34-2.01-.3l-1.06-1.41c-.48-.64-.34-1.52.3-2.01l.81-1.09c.48-.64 1.33-.86 2.05-.54l.29.13c.72.32 1.59.16 2.15-.4l1.06-1.06c.56-.56 1.16-.6 1.79-.35 1.29.51 3.05 1.64 4.42 3.02 1.36 1.37 2.52 3.13 3.03 4.42.28.71.1 1.54-.43 2.07l-1.06 1.06c-.53.53-1.36.71-2.07.42z"/>
+    </svg>
+  </a>
+
+  <!-- Toast Notification (Replaces alert()) -->
+  <div id="notificationToast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-primary-green text-gray-900 font-semibold px-6 py-3 rounded-lg shadow-xl opacity-0 transform translate-y-full transition-all duration-500 ease-in-out z-[1003]">
+    <!-- Message goes here -->
+  </div>
+
+  <script>
+    // --- START OF JAVASCRIPT ---
+
+    // Quantity Buttons
+    function changeQty(btn, delta) {
+      const input = btn.parentElement.querySelector('input');
+      let value = parseInt(input.value) || 1;
+      value += delta;
+      if(value < 1) value = 1;
+      input.value = value;
+    }
+
+    // Search Function
+    function searchProducts() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const products = document.querySelectorAll('.product-card');
+      products.forEach(product => {
+        const name = product.getAttribute('data-name').toLowerCase();
+        // Use block instead of flex to maintain grid layout integrity if searching reveals only a few items
+        product.style.display = name.includes(input) ? 'block' : 'none'; 
+      });
+    }
+
+    // Notification System
+    function showNotification(message) {
+        const toast = document.getElementById('notificationToast');
+        // Clear existing timeout if it's running
+        clearTimeout(toast.timeout);
+
+        toast.textContent = message;
+        // Slide in
+        toast.classList.remove('opacity-0', 'translate-y-full');
+        toast.classList.add('opacity-100', 'translate-y-0');
+
+        // Slide out after 2.5 seconds
+        toast.timeout = setTimeout(() => {
+            toast.classList.remove('opacity-100', 'translate-y-0');
+            toast.classList.add('opacity-0', 'translate-y-full');
+        }, 2500);
+    }
+    
+    // Cart functionality
+    let cart = [];
+
+    function addToCart(name, price, btn) {
+      const card = btn.closest('.product-card');
+      const qty = parseInt(card.querySelector('input').value) || 1;
+      
+      if (qty < 1) {
+          // This should ideally not happen due to the input min="1", but good safety check
+          showNotification(`Please select a valid quantity for ${name}.`);
+          return;
+      }
+
+      const existing = cart.find(item => item.name === name);
+      
+      if(existing) { 
+          existing.qty += qty; 
+      } 
+      else { 
+          cart.push({name, price, qty}); 
+      }
+      
+      updateCart();
+      // Use the new Toast Notification instead of alert()
+      showNotification(`${qty} x ${name} added to cart!`);
+    }
+
+    function updateCart() {
+      const cartItems = document.getElementById('cartItems');
+      const cartTotal = document.getElementById('cartTotal');
+      const cartCount = document.getElementById('cartCount');
+      const checkoutBtn = document.querySelector('.checkout-btn');
+
+      cartItems.innerHTML = '';
+      let total = 0;
+      let totalQty = 0;
+
+      if (cart.length === 0) {
+        cartItems.innerHTML = '<p class="text-center text-gray-500 py-10">Your cart is empty. Start shopping!</p>';
+        checkoutBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        checkoutBtn.href = '#';
+      } else {
+        checkoutBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        
+        // Build WhatsApp message for checkout
+        let waMessage = "Hello Zukula Life Organics, I would like to place an order for the following items:%0A%0A";
+
+        cart.forEach((item, index) => {
+          total += item.price * item.qty;
+          totalQty += item.qty;
+          
+          // Add to WhatsApp message
+          waMessage += `- ${item.qty}x ${item.name} (R${(item.price * item.qty).toFixed(2)})%0A`;
+
+          // Add to cart sidebar HTML
+          cartItems.innerHTML += `
+            <div class="flex justify-between items-center bg-gray-800 p-3 rounded-lg shadow-inner">
+                <div>
+                    <p class="text-white font-semibold">${item.name}</p>
+                    <p class="text-sm text-gray-400">R${item.price} x ${item.qty} = <span class="text-primary-green font-bold">R${(item.price * item.qty).toFixed(2)}</span></p>
+                </div>
+                <button onclick="removeItem(${index})" class="bg-red-600 text-white p-2 rounded-full hover:bg-red-700 transition duration-200 text-xs shadow-md">
+                    Remove
+                </button>
+            </div>
+          `;
+        });
+        
+        waMessage += "%0A*Total: R" + total.toFixed(2) + "*";
+        checkoutBtn.href = "https://wa.me/27787375280?text=" + waMessage;
+      }
+
+      cartTotal.textContent = "R" + total.toFixed(2);
+      cartCount.textContent = totalQty;
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+
+    function toggleCart() {
+      const sidebar = document.getElementById('cartSidebar');
+      const overlay = document.getElementById('cartOverlay');
+      
+      if (sidebar.classList.contains('translate-x-full')) {
+          // Open cart
+          sidebar.classList.remove('translate-x-full');
+          sidebar.classList.add('translate-x-0');
+          overlay.classList.remove('hidden');
+          setTimeout(() => overlay.classList.add('opacity-100'), 10);
+      } else {
+          // Close cart
+          sidebar.classList.remove('translate-x-0');
+          sidebar.classList.add('translate-x-full');
+          overlay.classList.remove('opacity-100');
+          setTimeout(() => overlay.classList.add('hidden'), 400); // Hide after animation
+      }
+      updateCart(); // Ensure cart data is fresh when opening
+    }
+
+    // Initial cart load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCart();
+    });
+
+    // Handle closing cart on escape key
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !document.getElementById('cartSidebar').classList.contains('translate-x-full')) {
+            toggleCart();
+        }
+    });
+
+    // --- END OF JAVASCRIPT ---
+  </script>
+
+</body>
+</html>
