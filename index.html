@@ -88,63 +88,143 @@
     </section>
 
     <!-- Products Section: Responsive Grid -->
-    <section class="py-20 bg-gray-950" id="products">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+  <section class="py-20 bg-gray-950" id="products">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <h2 class="text-4xl font-extrabold text-center text-primary-green mb-12">Hand-Picked Organics</h2>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          
-          <!-- Product Card 1: Elevated on hover -->
-          <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40">
-            <img 
-              src="item2.jpeg" 
-              alt="Organic Honey" 
-              class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
-              onerror="this.onerror=null;this.src='https://placehold.co/600x400/10b981/ffffff?text=Product+Image+1'"
-            >
-            <h3 class="text-xl font-bold text-white mb-2">Organic Honey</h3>
-            <p class="text-gray-400 mb-4 text-sm">Pure, raw, and healthy honey straight from nature's untouched beehives.</p>
-          </div>
+            
+            <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40">
+                <img 
+                    src="item2.jpeg" 
+                    alt="Organic Honey" 
+                    class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/10b981/ffffff?text=Product+Image+1'"
+                >
+                <h3 class="text-xl font-bold text-white mb-2">Chlorella Soap</h3>
+                <p class="text-gray-400 mb-4 text-sm">Gets rid of Body Odours. Heals wounds, Clear Skin. Eliminates Pimples</p>
+                <button 
+                    class="view-details-btn mt-4 w-full bg-primary-green hover:bg-green-700 text-gray-900 font-bold py-2 px-4 rounded-lg transition duration-300"
+                    data-modal-target="product-modal"
+                    data-product-name="Chlorella Soap"
+                    data-details="**Benefits:** Excellent for deep cleansing, soothing skin irritations, and eliminating body odor. The chlorella helps draw out impurities and supports skin cell renewal. **Ingredients:** Saponified organic oils, Chlorella vulgaris extract, essential oils. **Usage:** Lather and apply to body. For best results, leave on for one minute before rinsing."
+                >
+                    View More Details
+                </button>
+            </div>
 
-          <!-- Product Card 2 -->
-          <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40">
-            <img 
-              src="item3.jpeg" 
-              alt="Herbal Tea" 
-              class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
-              onerror="this.onerror=null;this.src='https://placehold.co/600x400/065f46/ffffff?text=Product+Image+2'"
-            >
-            <h3 class="text-xl font-bold text-white mb-2">Herbal Tea</h3>
-            <p class="text-gray-400 mb-4 text-sm">Refreshing blends of organic herbs to rejuvenate your mind and body.</p>
-          </div>
+            <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40">
+                <img 
+                    src="item3.jpeg" 
+                    alt="Herbal Tea" 
+                    class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/065f46/ffffff?text=Product+Image+2'"
+                >
+                <h3 class="text-xl font-bold text-white mb-2">Chlorella Antiseptic Spray</h3>
+                <p class="text-gray-400 mb-4 text-sm">chlorella antiseptic spray aims to leverage the algae's natural antimicrobial, anti-inflammatory, and antioxidant-rich properties to cleanse and promote the healing of minor skin issues.</p>
+                <button 
+                    class="view-details-btn mt-4 w-full bg-primary-green hover:bg-green-700 text-gray-900 font-bold py-2 px-4 rounded-lg transition duration-300"
+                    data-modal-target="product-modal"
+                    data-product-name="Chlorella Antiseptic Spray"
+                    data-details="**Benefits:** Provides gentle, non-stinging antiseptic action. Ideal for minor cuts, scrapes, rashes, and insect bites. The algae's growth factors aid rapid recovery. **Ingredients:** Purified water, Chlorella extract, natural preservative blend, essential oils. **Usage:** Spray directly onto the affected area 2-3 times daily."
+                >
+                    View More Details
+                </button>
+            </div>
 
-          <!-- Product Card 3 -->
-          <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40">
-            <img 
-              src="item4.jpeg" 
-              alt="Natural Oils" 
-              class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
-              onerror="this.onerror=null;this.src='https://placehold.co/600x400/34d399/ffffff?text=Product+Image+3'"
-            >
-            <h3 class="text-xl font-bold text-white mb-2">Natural Oils</h3>
-            <p class="text-gray-400 mb-4 text-sm">High-quality oils extracted naturally for skin, hair, and holistic wellness.</p>
-          </div>
+            <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40">
+                <img 
+                    src="item4.jpeg" 
+                    alt="Natural Oils" 
+                    class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/34d399/ffffff?text=Product+Image+3'"
+                >
+                <h3 class="text-xl font-bold text-white mb-2">Chlorella Water</h3>
+                <p class="text-gray-400 mb-4 text-sm">The primary health benefit of chlorella water is its ability to bind to and help remove heavy metals and other toxins from the body, supporting natural detoxification pathways.</p>
+                <button 
+                    class="view-details-btn mt-4 w-full bg-primary-green hover:bg-green-700 text-gray-900 font-bold py-2 px-4 rounded-lg transition duration-300"
+                    data-modal-target="product-modal"
+                    data-product-name="Chlorella Water"
+                    data-details="**Benefits:** Supports internal cleansing, boosts immune response, and is rich in essential vitamins (B12, C, E) and minerals (Iron, Zinc). Excellent for overall vitality. **Ingredients:** Highly purified water infused with broken cell-wall Chlorella vulgaris. **Usage:** Drink 1 bottle daily. Best consumed in the morning on an empty stomach."
+                >
+                    View More Details
+                </button>
+            </div>
 
-          <!-- Product Card 4 -->
-          <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40">
-            <img 
-              src="item5.jpeg" 
-              alt="Organic Spices" 
-              class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
-              onerror="this.onerror=null;this.src='https://placehold.co/600x400/10b981/ffffff?text=Product+Image+4'"
-            >
-            <h3 class="text-xl font-bold text-white mb-2">Organic Spices</h3>
-            <p class="text-gray-400 mb-4 text-sm">Add natural flavor and aroma to your meals with our sustainably grown spices.</p>
-          </div>
+             <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40">
+    <img 
+        src="item5.jpeg" 
+        alt="Natural Oils" 
+        class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
+        onerror="this.onerror=null;this.src='https://placehold.co/600x400/34d399/ffffff?text=Product+Image+3'"
+    >
+    <h3 class="text-xl font-bold text-white mb-2">Chlorella Water</h3>
+    <p class="text-gray-400 mb-4 text-sm">Please click for more info</p>
+    <button 
+        class="view-details-btn mt-4 w-full bg-primary-green hover:bg-green-700 text-gray-900 font-bold py-2 px-4 rounded-lg transition duration-300"
+        data-modal-target="product-modal"
+        data-product-name="Chlorella Organic Water - Full Benefits"
+        data-details="
+            <h4 class='text-xl font-semibold text-white mb-4'>Comprehensive Health Benefits:</h4>
+            <div class='grid grid-cols-2 gap-x-6 gap-y-2 text-sm'>
+                <ul class='list-none space-y-2'>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Immune System</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Helps repair cell damage</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Blood purifier</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Increases CD4 count</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Relieves Inflammation</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Elevates Mood</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Prevents allergies</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Joints & Arthritis</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> High Blood Pressure</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Loss of sleep / Tiredness</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Ulcers / Open sores</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> High Cholesterol</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Headaches / Stress</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Low Sex Desire</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Male Fertility / ED</li>
+                </ul>
+                <ul class='list-none space-y-2'>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Kidney Problems / Failures</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Cramps</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Parkinson Disease / Stroke</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Asthma / Sinus / Pneumonia</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> TB</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Eczema / Psoriasis / Dermatitis</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Cancers of all types</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Prostate Health</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Urinary Tract / Bladder Infection</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Constipation</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> High Fever</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Goitre & Thyroid problem</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Anti Ageing</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Diabetes all types</li>
+                    <li class='flex items-start'><span class='text-primary-green mr-2'>&#10003;</span> Burns</li>
+                </ul>
+            </div>
+        "
+    >
+        View More Details
+    </button>
+</div>
+            
         </div>
-      </div>
-    </section>
+    </div>
 
+    <div id="product-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-80 transition-opacity duration-300" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="bg-gray-900 rounded-xl p-8 w-11/12 max-w-lg shadow-2xl transform scale-100 transition-all duration-300">
+            <div class="flex justify-between items-start mb-4">
+                <h3 id="modal-title" class="text-2xl font-bold text-primary-green">Product Details</h3>
+                <button id="close-modal-btn" class="text-gray-400 hover:text-white transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div id="modal-content" class="text-gray-300 space-y-3">
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- About Us Section -->
 <section id="about" class="py-20 bg-gray-900">
   <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
@@ -247,6 +327,60 @@
           transition duration-300 transform hover:scale-110 hover:shadow-primary-green/50">
     <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
 </a>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('product-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const detailButtons = document.querySelectorAll('.view-details-btn');
 
+        // Function to open the modal
+        const openModal = (name, detailsHtml) => {
+            modalTitle.textContent = name;
+            modalContent.innerHTML = detailsHtml;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        };
+
+        // Function to close the modal
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = ''; // Restore background scrolling
+        };
+
+        // Event listener for all "View More Details" buttons
+        detailButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const productName = event.currentTarget.getAttribute('data-product-name');
+                const productDetails = event.currentTarget.getAttribute('data-details');
+                
+                // Replace markdown-style bolding with HTML for display
+                const formattedDetails = productDetails.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                
+                openModal(productName, formattedDetails);
+            });
+        });
+
+        // Event listener to close modal via button
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Event listener to close modal when clicking outside (on the overlay)
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Event listener to close modal with the ESC key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    });
+</script>
 </body>
 </html>

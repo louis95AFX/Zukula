@@ -63,9 +63,9 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="productGrid">
 
         <!-- Product Card 1: Organic Honey -->
-        <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40 relative" data-name="Organic Honey" data-price="150">
+        <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40 relative" data-name="Organic Honey" data-price="60">
           <!-- Floating Price Badge (FIXED: Added z-10) -->
-          <span class="absolute top-4 right-4 bg-primary-green text-gray-900 font-bold px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 -translate-y-2 transition duration-300 z-10">R150</span>
+          <span class="absolute top-4 right-4 bg-primary-green text-gray-900 font-bold px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 -translate-y-2 transition duration-300 z-10">R60</span>
           
           <img 
             src="item1.jpeg" 
@@ -73,9 +73,9 @@
             class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
             onerror="this.onerror=null;this.src='https://placehold.co/600x400/10b981/ffffff?text=Pure+Honey'"
           >
-          <h3 class="text-xl font-bold text-white mb-1">Organic Honey</h3>
-          <p class="text-primary-green font-extrabold text-lg mb-2">R150</p>
-          <p class="text-gray-400 mb-4 text-sm">Pure, raw, and healthy honey straight from nature's untouched beehives.</p>
+          <h3 class="text-xl font-bold text-white mb-1">Chlorella Water</h3>
+          <p class="text-primary-green font-extrabold text-lg mb-2">R60</p>
+          <p class="text-gray-400 mb-4 text-sm">500ml each.</p>
           
           <div class="flex justify-center items-center space-x-2 mb-4">
             <button onclick="changeQty(this, -1)" class="bg-gray-700 text-white font-bold w-8 h-8 rounded-full hover:bg-gray-600 transition">-</button>
@@ -83,76 +83,76 @@
             <button onclick="changeQty(this, 1)" class="bg-primary-green text-gray-900 font-bold w-8 h-8 rounded-full hover:bg-emerald-400 transition">+</button>
           </div>
           
-          <button onclick="addToCart('Organic Honey', 150, this)" class="w-full bg-primary-green text-gray-900 font-semibold py-3 rounded-full hover:bg-emerald-400 transition duration-300 shadow-md">
+          <button onclick="addToCart('Chlorella Water(singles)', 60, this)" class="w-full bg-primary-green text-gray-900 font-semibold py-3 rounded-full hover:bg-emerald-400 transition duration-300 shadow-md">
             Add to Cart
           </button>
         </div>
 
         <!-- Product Card 2: Herbal Tea -->
-        <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40 relative" data-name="Herbal Tea" data-price="120">
+        <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40 relative" data-name="Herbal Tea" data-price="600">
           <!-- Floating Price Badge (FIXED: Added z-10) -->
-          <span class="absolute top-4 right-4 bg-primary-green text-gray-900 font-bold px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 -translate-y-2 transition duration-300 z-10">R120</span>
+          <span class="absolute top-4 right-4 bg-primary-green text-gray-900 font-bold px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 -translate-y-2 transition duration-300 z-10">R600</span>
           <img 
-            src="item2.jpeg" 
+            src="item4.jpeg" 
             alt="Herbal Tea" 
             class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
             onerror="this.onerror=null;this.src='https://placehold.co/600x400/065f46/ffffff?text=Herbal+Tea'"
           >
-          <h3 class="text-xl font-bold text-white mb-1">Herbal Tea</h3>
-          <p class="text-primary-green font-extrabold text-lg mb-2">R120</p>
-          <p class="text-gray-400 mb-4 text-sm">Refreshing blends of organic herbs to rejuvenate your mind and body.</p>
+          <h3 class="text-xl font-bold text-white mb-1">Chlorella Water</h3>
+          <p class="text-primary-green font-extrabold text-lg mb-2">R600</p>
+          <p class="text-gray-400 mb-4 text-sm">500ml X12</p>
           <div class="flex justify-center items-center space-x-2 mb-4">
             <button onclick="changeQty(this, -1)" class="bg-gray-700 text-white font-bold w-8 h-8 rounded-full hover:bg-gray-600 transition">-</button>
             <input type="number" value="1" min="1" class="w-12 text-center bg-gray-800 text-white rounded-md border-primary-green focus:ring-primary-green">
             <button onclick="changeQty(this, 1)" class="bg-primary-green text-gray-900 font-bold w-8 h-8 rounded-full hover:bg-emerald-400 transition">+</button>
           </div>
-          <button onclick="addToCart('Herbal Tea', 120, this)" class="w-full bg-primary-green text-gray-900 font-semibold py-3 rounded-full hover:bg-emerald-400 transition duration-300 shadow-md">
+          <button onclick="addToCart('Chlorella Water', 600, this)" class="w-full bg-primary-green text-gray-900 font-semibold py-3 rounded-full hover:bg-emerald-400 transition duration-300 shadow-md">
             Add to Cart
           </button>
         </div>
 
         <!-- Product Card 3: Natural Oils -->
-        <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40 relative" data-name="Natural Oils" data-price="200">
+        <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40 relative" data-name="Natural Oils" data-price="50">
           <!-- Floating Price Badge (FIXED: Added z-10) -->
-          <span class="absolute top-4 right-4 bg-primary-green text-gray-900 font-bold px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 -translate-y-2 transition duration-300 z-10">R200</span>
+          <span class="absolute top-4 right-4 bg-primary-green text-gray-900 font-bold px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 -translate-y-2 transition duration-300 z-10">R50</span>
           <img 
             src="item3.jpeg" 
             alt="Natural Oils" 
             class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
             onerror="this.onerror=null;this.src='https://placehold.co/600x400/34d399/ffffff?text=Natural+Oils'"
           >
-          <h3 class="text-xl font-bold text-white mb-1">Natural Oils</h3>
-          <p class="text-primary-green font-extrabold text-lg mb-2">R200</p>
-          <p class="text-gray-400 mb-4 text-sm">High-quality oils extracted naturally for skin, hair, and wellness.</p>
+          <h3 class="text-xl font-bold text-white mb-1">Chlorella Antiseptic Spray</h3>
+          <p class="text-primary-green font-extrabold text-lg mb-2">R50</p>
+          <p class="text-gray-400 mb-4 text-sm"> antioxidant-rich properties to cleanse and promote the healing of minor skin issues</p>
           <div class="flex justify-center items-center space-x-2 mb-4">
             <button onclick="changeQty(this, -1)" class="bg-gray-700 text-white font-bold w-8 h-8 rounded-full hover:bg-gray-600 transition">-</button>
             <input type="number" value="1" min="1" class="w-12 text-center bg-gray-800 text-white rounded-md border-primary-green focus:ring-primary-green">
             <button onclick="changeQty(this, 1)" class="bg-primary-green text-gray-900 font-bold w-8 h-8 rounded-full hover:bg-emerald-400 transition">+</button>
           </div>
-          <button onclick="addToCart('Natural Oils', 200, this)" class="w-full bg-primary-green text-gray-900 font-semibold py-3 rounded-full hover:bg-emerald-400 transition duration-300 shadow-md">
+          <button onclick="addToCart('Chlorella Antiseptic Spray', 50, this)" class="w-full bg-primary-green text-gray-900 font-semibold py-3 rounded-full hover:bg-emerald-400 transition duration-300 shadow-md">
             Add to Cart
           </button>
         </div>
 
         <!-- Product Card 4: Organic Spices -->
-        <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40 relative" data-name="Organic Spices" data-price="90">
+        <div class="product-card group bg-gray-900 p-5 rounded-xl shadow-lg transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary-green/40 relative" data-name="Organic Spices" data-price="100">
           <!-- Floating Price Badge (FIXED: Added z-10) -->
-          <span class="absolute top-4 right-4 bg-primary-green text-gray-900 font-bold px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 -translate-y-2 transition duration-300 z-10">R90</span>
+          <span class="absolute top-4 right-4 bg-primary-green text-gray-900 font-bold px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 -translate-y-2 transition duration-300 z-10">R100</span>
           <img 
-            src="item4.jpeg" 
+            src="item2.jpeg" 
             alt="Organic Spices" 
             class="w-full h-48 object-cover rounded-lg mb-4 transform group-hover:rotate-1 transition duration-300"
             onerror="this.onerror=null;this.src='https://placehold.co/600x400/10b981/ffffff?text=Organic+Spices'"
           >
-          <h3 class="text-xl font-bold text-white mb-1">Organic Spices</h3>
-          <p class="text-primary-green font-extrabold text-lg mb-2">R90</p>
-          <p class="text-gray-400 mb-4 text-sm">Add natural flavor and aroma to your meals with our organic spices.</p>
+          <h3 class="text-xl font-bold text-white mb-1">Chlorella Soap</h3>
+          <p class="text-primary-green font-extrabold text-lg mb-2">R100</p>
+          <p class="text-gray-400 mb-4 text-sm">Clear Skin. Eliminte Pimples</p>
           <div class="flex justify-center items-center space-x-2 mb-4">
             <button onclick="changeQty(this, -1)" class="bg-gray-700 text-white font-bold w-8 h-8 rounded-full hover:bg-gray-600 transition">-</button>
             <input type="number" value="1" min="1" class="w-12 text-center bg-gray-800 text-white rounded-md border-primary-green focus:ring-primary-green">
             <button onclick="changeQty(this, 1)" class="bg-primary-green text-gray-900 font-bold w-8 h-8 rounded-full hover:bg-emerald-400 transition">+</button>
           </div>
-          <button onclick="addToCart('Organic Spices', 90, this)" class="w-full bg-primary-green text-gray-900 font-semibold py-3 rounded-full hover:bg-emerald-400 transition duration-300 shadow-md">
+          <button onclick="addToCart('Chlorella Soap', 100, this)" class="w-full bg-primary-green text-gray-900 font-semibold py-3 rounded-full hover:bg-emerald-400 transition duration-300 shadow-md">
             Add to Cart
           </button>
         </div>
